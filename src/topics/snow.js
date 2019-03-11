@@ -13,7 +13,7 @@ export default {
       type: 'checkbox-set',
       options: {
         topicLayers: [
-          'Streets - Most Recent Segment Visit Streets'
+          'Snow Routes'
         ]
       }
     }
