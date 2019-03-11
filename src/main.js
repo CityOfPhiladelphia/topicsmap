@@ -74,6 +74,7 @@ var WEBMAP_ID = 'aa2a8e9145f04998895d505b4ed2afa5';
 
 layerboard({
   bundled: true,
+  layerFilter: false,
   router: {
     enabled: true
   },
@@ -115,10 +116,10 @@ layerboard({
   baseConfig: BASE_CONFIG_URL,
   webmapId: WEBMAP_ID,
   topics: [
+    permit,
     pave,
-    snow,
     pickup,
-    permit
+    snow,
   ],
   components: [
     {

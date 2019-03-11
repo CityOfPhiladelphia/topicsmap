@@ -4,11 +4,16 @@ export default {
   label: 'Snow',
   components: [
     {
+      type: 'callout',
+      slots: {
+        text: 'Turn on and off layers about snow plowing in Philadelphia',
+      }
+    },
+    {
       type: 'checkbox-set',
       options: {
         topicLayers: [
-          'Current Lane Closures',
-          'Vending Prohibited Streets'
+          'Streets - Most Recent Segment Visit Streets'
         ]
       }
     }

@@ -4,6 +4,12 @@ export default {
   label: 'Paving',
   components: [
     {
+      type: 'callout',
+      slots: {
+        text: 'Turn on and off layers about paving in Philadelphia',
+      }
+    },
+    {
       type: 'checkbox-set',
       options: {
         topicLayers: [

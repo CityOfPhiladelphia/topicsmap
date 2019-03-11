@@ -1,14 +1,21 @@
 export default {
   key: 'permit',
   icon: 'scroll',
-  label: 'Permit',
+  label: 'Street and Sidewalk Closure Permits',
   components: [
+    {
+      type: 'callout',
+      slots: {
+        text: 'click <a target="blank" href="http://stsweb.phila.gov/permitPHL/FAQ.pdf">here</a>\
+        to view the frequently asked questions (FAQ) doc',
+      }
+    },
     {
       type: 'checkbox-set',
       options: {
         topicLayers: [
-          'Bikeable Trails',
-          'Bike Network'
+          'Current Lane Closures',
+          'Future Lane Closures',
         ]
       }
     }
