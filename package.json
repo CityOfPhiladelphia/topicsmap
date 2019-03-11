@@ -1,0 +1,39 @@
+{
+  "name": "topicsmaps",
+  "version": "0.0.1",
+  "description": "Example for using new layerboard topics functionality",
+  "main": "",
+  "repository": "https://github.com/cityofphiladelphia/openmaps",
+  "author": "City of Philadelphia <maps@phila.gov>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev-build": "vue-cli-service build --mode development"
+  },
+  "dependencies": {
+    "@philly/layerboard": "https://github.com/CityOfPhiladelphia/layerboard#86b0e72f4bacc98a81caab0f3a4640e66d47fbd5",
+    "@sentry/browser": "4.3.4",
+    "axios": "^0.18.0",
+    "moment": "^2.24.0",
+    "phila-standards": "^1.0.2",
+    "vue": "^2.6.8"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "vue-template-compiler": "^2.6.8",
+    "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
