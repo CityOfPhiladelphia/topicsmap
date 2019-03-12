@@ -2,6 +2,7 @@ export default {
   key: 'permit',
   icon: 'scroll',
   label: 'Street and Sidewalk Closure Permits',
+  // parcels: 'pwd',
   components: [
     {
       type: 'callout',
@@ -16,7 +17,10 @@ export default {
         topicLayers: [
           'Current Lane Closures',
           'Future Lane Closures',
-        ]
+        ],
+        defaultTopicLayers: [
+          'Current Lane Closures'
+        ],
       }
     }
   ]

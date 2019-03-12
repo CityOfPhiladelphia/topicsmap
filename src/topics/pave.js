@@ -2,6 +2,7 @@ export default {
   key: 'pave',
   icon: 'road',
   label: 'Paving',
+  // parcels: 'pwd',
   components: [
     {
       type: 'callout',
@@ -14,7 +15,10 @@ export default {
       options: {
         topicLayers: [
           'Paving Plan 2015',
-        ]
+        ],
+        defaultTopicLayers: [
+          'Paving Plan 2015'
+        ],
       }
     }
   ]

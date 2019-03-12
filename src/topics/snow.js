@@ -2,6 +2,7 @@ export default {
   key: 'snow',
   icon: 'snowflake',
   label: 'Snow',
+  // parcels: 'slate',
   components: [
     {
       type: 'callout',
@@ -13,8 +14,11 @@ export default {
       type: 'checkbox-set',
       options: {
         topicLayers: [
-          'Snow Routes'
-        ]
+          'Snow Segment Visits'
+        ],
+        defaultTopicLayers: [
+          'Snow Segment Visits'
+        ],
       }
     }
   ]

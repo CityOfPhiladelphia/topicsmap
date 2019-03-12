@@ -2,6 +2,7 @@ export default {
   key: 'pickup',
   icon: 'trash-alt',
   label: 'Pickup',
+  // parcels: 'slate',
   components: [
     {
       type: 'callout',
@@ -13,9 +14,14 @@ export default {
       type: 'checkbox-set',
       options: {
         topicLayers: [
-          'No-thru-Trucks Streets',
-          'Historic Streets'
-        ]
+          'Pickup Segment Visits',
+          'Rubbish and Recycling Collection Schedule',
+          'Leaf Collection Areas',
+          'Big Belly Wastebaskets',
+        ],
+        defaultTopicLayers: [
+          'Pickup Segment Visits'
+        ],
       }
     }
   ]

@@ -66,11 +66,10 @@ window.openHelp = function(){
   window.location.hash = finalHash;
 }
 
-var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/openmaps-base-config@ba14a53156e85ca8e655fc85cc83dd24d7323ef2/config.js';
+var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/openmaps-base-config@de93992fa42660d4df22e90df584c34ad480261e/config.js';
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
-// var WEBMAP_ID = '4c3ed877199c402895b7fa45ce6409b6';
-var WEBMAP_ID = 'aa2a8e9145f04998895d505b4ed2afa5';
-
+var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
+// var WEBMAP_ID = '1596df70df0349e293ceec46a06ccc50';
 
 layerboard({
   bundled: true,
@@ -121,12 +120,19 @@ layerboard({
     pickup,
     snow,
   ],
+  defaultTopic: null,
   components: [
     {
-      type: 'topic-set',
-      options: {
-        defaultTopic: 'property'
+      type: 'callout',
+      slots: {
+        text: 'Welcome to the Streets Portal.  Turn on and off layers in the topics below'
       }
+    },
+    {
+      type: 'topic-set',
+      // options: {
+      //   defaultTopic: null
+      // }
     },
   ],
   modals: ['help'],
