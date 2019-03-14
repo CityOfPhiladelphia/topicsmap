@@ -1,7 +1,7 @@
 export default {
   key: 'pave',
   icon: 'road',
-  label: 'Paving',
+  label: 'PavePHL',
   // parcels: 'pwd',
   components: [
     {

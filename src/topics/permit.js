@@ -1,7 +1,7 @@
 export default {
   key: 'permit',
   icon: 'scroll',
-  label: 'Street and Sidewalk Closure Permits',
+  label: 'PermitPHL',
   // parcels: 'pwd',
   components: [
     {

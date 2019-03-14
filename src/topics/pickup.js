@@ -1,7 +1,7 @@
 export default {
   key: 'pickup',
   icon: 'trash-alt',
-  label: 'Pickup',
+  label: 'PickUpPHL',
   // parcels: 'slate',
   components: [
     {

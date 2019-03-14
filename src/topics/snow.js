@@ -1,7 +1,7 @@
 export default {
   key: 'snow',
   icon: 'snowflake',
-  label: 'Snow',
+  label: 'PlowPHL',
   // parcels: 'slate',
   components: [
     {
