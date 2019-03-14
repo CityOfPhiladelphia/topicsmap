@@ -125,7 +125,7 @@ layerboard({
     {
       type: 'callout',
       slots: {
-        text: 'Welcome to the Streets Portal.  Turn on and off layers in the topics below'
+        text: 'Welcome to STREETsmartPHL.  Turn on and off map layers in the topics below'
       }
     },
     {
