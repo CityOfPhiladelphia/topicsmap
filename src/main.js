@@ -1,21 +1,14 @@
 /*
-________                           _____
-\_____  \ ______   ____   ____    /     \ _____  ______  ______
- /   |   \\____ \_/ __ \ /    \  /  \ /  \\__  \ \____ \/  ___/
-/    |    \  |_> >  ___/|   |  \/    Y    \/ __ \|  |_> >___ \
-\_______  /   __/ \___  >___|  /\____|__  (____  /   __/____  >
-        \/|__|        \/     \/         \/     \/|__|       \/
+___________           .__
+\__    ___/___ ______ |__| ____   ______ _____ _____  ______
+  |    | /  _ \\____ \|  |/ ___\ /  ___//     \\__  \ \____ \
+  |    |(  <_> )  |_> >  \  \___ \___ \|  Y Y  \/ __ \|  |_> >
+  |____| \____/|   __/|__|\___  >____  >__|_|  (____  /   __/
+               |__|           \/     \/      \/     \/|__|
 */
-
-// import * as Sentry from '@sentry/browser';
-// Sentry.init({ dsn: 'https://ba45a0a61b464a2e9f55c5fd55e209d6@sentry.io/1332677' });
 
 import Vue from 'vue';
 Vue.config.devtools = true;
-
-// import * as datefns from 'date-fns';
-// var test = datefns.format(1552067696, 'MM/DD/YYYY')
-// console.log('datefns:', datefns, 'datefns.format:', datefns.format, 'test:', test);
 
 import * as esri from 'esri-leaflet';
 L.esri = esri;
@@ -23,7 +16,6 @@ import * as rend from 'esri-leaflet-renderers';
 L.esri.Renderers = rend;
 import 'esri-leaflet-legend/dist/esri-leaflet-legend-compat-src-edit.js';
 import 'Leaflet-PointInPolygon/wise-leaflet-pip.js';
-import '@mapbox/leaflet-omnivore/leaflet-omnivore.min.js';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSnowflake } from '@fortawesome/free-solid-svg-icons/faSnowflake';
@@ -33,7 +25,6 @@ import { faRoad } from '@fortawesome/free-solid-svg-icons/faRoad';
 library.add(faSnowflake, faScroll, faTrashAlt, faRoad);
 
 import axios from 'axios';
-// import layerboard from '@philly/layerboard';
 import layerboard from '@philly/layerboard/src/main.js';
 
 // Topics
