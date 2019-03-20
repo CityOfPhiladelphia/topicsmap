@@ -38,14 +38,12 @@ import 'leaflet-easybutton/src/easy-button.css';
 import 'leaflet-measure/dist/leaflet-measure.css';
 
 // turn off console logging in production
-// TODO come up with better way of doing this with webpack + env vars
 const { hostname='' } = location;
 if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
 }
 
 window.openHelp = function(){
-// function openHelp() {
   var firstHash = window.location.hash;
   console.log('setHash is running, firstHash:', firstHash);
   var firstHashArr = firstHash.split('/').slice(2);
@@ -60,7 +58,6 @@ window.openHelp = function(){
 var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/openmaps-base-config@de93992fa42660d4df22e90df584c34ad480261e/config.js';
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
-// var WEBMAP_ID = '1596df70df0349e293ceec46a06ccc50';
 
 layerboard({
   bundled: true,
@@ -81,7 +78,6 @@ layerboard({
     placeholder: 'Search the map',
   },
   map: {
-    // possibly should move to base config
     defaultBasemap: 'pwd',
     defaultIdentifyFeature: 'address-marker',
     imagery: {
@@ -105,6 +101,7 @@ layerboard({
   gatekeeperKey: GATEKEEPER_KEY,
   baseConfig: BASE_CONFIG_URL,
   webmapId: WEBMAP_ID,
+  defaultPanel: 'topics',
   topics: [
     permit,
     pave,
