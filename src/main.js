@@ -24,7 +24,6 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
 import { faRoad } from '@fortawesome/free-solid-svg-icons/faRoad';
 library.add(faSnowflake, faScroll, faTrashAlt, faRoad);
 
-import axios from 'axios';
 import layerboard from '@philly/layerboard/src/main.js';
 
 // Topics
@@ -32,10 +31,6 @@ import pave from './topics/pave';
 import snow from './topics/snow';
 import pickup from './topics/pickup';
 import permit from './topics/permit';
-
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-easybutton/src/easy-button.css';
-import 'leaflet-measure/dist/leaflet-measure.css';
 
 // turn off console logging in production
 const { hostname='' } = location;
