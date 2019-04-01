@@ -7,16 +7,6 @@ ___________           .__
                |__|           \/     \/      \/     \/|__|
 */
 
-import Vue from 'vue';
-Vue.config.devtools = true;
-
-import * as esri from 'esri-leaflet';
-L.esri = esri;
-import * as rend from 'esri-leaflet-renderers';
-L.esri.Renderers = rend;
-import 'esri-leaflet-legend/dist/esri-leaflet-legend-compat-src-edit.js';
-import 'Leaflet-PointInPolygon/wise-leaflet-pip.js';
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSnowflake } from '@fortawesome/free-solid-svg-icons/faSnowflake';
 import { faScroll } from '@fortawesome/free-solid-svg-icons/faScroll';
