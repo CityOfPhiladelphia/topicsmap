@@ -3,4 +3,5 @@ public/*.js
 public/*.js.map
 .npmrc
 statistics.html
-topicsmap_File.js
+topicsmap_file.js
+dist/
