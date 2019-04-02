@@ -2,11 +2,16 @@ language: node_js
 node_js:
   - "8"
 env:
-  - MY_VAR=hello
+  - VUE_APP_CYCLOMEDIA_API_KEY=$CYCLOMEDIA_API_KEY
+  - VUE_APP_CYCLOMEDIA_HOST=$CYCLOMEDIA_HOST
+  - VUE_APP_CYCLOMEDIA_PASSWORD=$CYCLOMEDIA_PASSWORD
+  - VUE_APP_CYCLOMEDIA_USERNAME=$CYCLOMEDIA_USERNAME
+  - VUE_APP_PICTOMETRY_API_KEY=$PICTOMETRY_API_KEY
+  - VUE_APP_PICTOMETRY_HOST=$PICTOMETRY_HOST
+  - VUE_APP_PICTOMETRY_SECRET_KEY=$PICTOMETRY_SECRET_KEY
 before_install:
   - printf "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${FA_AUTH_TOKEN}" >> ~/.npmrc
-  - printf "VUE_APP_FOO=test" >> ~/.env
-script: export VUE_APP_MYCUSTOMENV=wawa && npm run build
+script: npm run build
 before_deploy:
   - rm -rf node_modules
 deploy:

@@ -45,8 +45,29 @@ var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-d
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
 
-console.log('process.env.VUE_APP_FOO', process.env.VUE_APP_FOO);
-console.log('process.env.VUE_APP_MYCUSTOMENV', process.env.VUE_APP_MYCUSTOMENV);
+// console.log('process.env.VUE_APP_FOO', process.env.VUE_APP_FOO);
+// console.log('process.env.VUE_APP_MYCUSTOMENV', process.env.VUE_APP_MYCUSTOMENV);
+
+let obj = {
+  cyclomedia: {
+    host: process.env.VUE_APP_CYCLOMEDIA_HOST,
+    username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
+    password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
+    apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
+  },
+  pictometryLocal: {
+    host: process.env.VUE_APP_PICTOMETRY_HOST,
+    apiKey: process.env.VUE_APP_PICTOMETRY_API_KEY,
+    secretKey: process.env.VUE_APP_PICTOMETRY_SECRET_KEY,
+  },
+}
+console.log('process.env.VUE_APP_CYCLOMEDIA_API_KEY', process.env.VUE_APP_CYCLOMEDIA_API_KEY);
+console.log('process.env.VUE_APP_CYCLOMEDIA_HOST', process.env.VUE_APP_CYCLOMEDIA_HOST);
+console.log('process.env.VUE_APP_CYCLOMEDIA_PASSWORD', process.env.VUE_APP_CYCLOMEDIA_PASSWORD);
+console.log('process.env.VUE_APP_CYCLOMEDIA_USERNAME', process.env.VUE_APP_CYCLOMEDIA_USERNAME);
+console.log('process.env.VUE_APP_PICTOMETRY_API_KEY', process.env.VUE_APP_PICTOMETRY_API_KEY);
+console.log('process.env.VUE_APP_PICTOMETRY_HOST', process.env.VUE_APP_PICTOMETRY_HOST);
+console.log('process.env.VUE_APP_PICTOMETRY_SECRET_KEY', process.env.VUE_APP_PICTOMETRY_SECRET_KEY);
 
 layerboard(
   {
@@ -84,9 +105,11 @@ layerboard(
       enabled: false,
       measurementAllowed: false,
       popoutAble: true,
+      recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs'
     },
     pictometry: {
       enabled: false,
+      iframeId: 'pictometry-ipa'
     },
     gatekeeperKey: GATEKEEPER_KEY,
     baseConfig: BASE_CONFIG_URL,
@@ -115,5 +138,6 @@ layerboard(
     ],
     modals: ['help'],
   },
+  obj
   // topicsmap_file
 );
