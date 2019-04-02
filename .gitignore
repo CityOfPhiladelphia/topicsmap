@@ -3,6 +3,7 @@ public/*.js
 public/*.js.map
 .npmrc
 .env
+.env.local
 statistics.html
 topicsmap_file.js
 dist/
