@@ -22,11 +22,11 @@ import snow from './topics/snow';
 import pickup from './topics/pickup';
 import permit from './topics/permit';
 
-// turn off console logging in production
-// const { hostname='' } = location;
-// if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
-//   console.log = console.info = console.debug = console.error = function () {};
-// }
+turn off console logging in production
+const { hostname='' } = location;
+if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
+  console.log = console.info = console.debug = console.error = function () {};
+}
 
 window.openHelp = function(){
   var firstHash = window.location.hash;
@@ -40,7 +40,7 @@ window.openHelp = function(){
   window.location.hash = finalHash;
 }
 
-var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@d3ad38f050cf55b4ab0dc2ff68e6f18025690246/config.js';
+var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/layerboard-default-base-config@8e227b2abe04a0dee3a327ccab9d7dc49e1b6354/config.js';
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
 
