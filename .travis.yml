@@ -3,9 +3,8 @@ node_js:
   - "8"
 before_install:
   - printf "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${FA_AUTH_TOKEN}" >> ~/.npmrc
+  - printf "export default { cyclomedia: { test1: 'test' }}" >> ~/src/topicsmap_file.js
 script: npm run build
-env:
-  - TESTVAR=testVar
 before_deploy:
   - rm -rf node_modules
 deploy:
