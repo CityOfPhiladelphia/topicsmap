@@ -22,7 +22,7 @@ import snow from './topics/snow';
 import pickup from './topics/pickup';
 import permit from './topics/permit';
 
-turn off console logging in production
+// turn off console logging in production
 const { hostname='' } = location;
 if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
   console.log = console.info = console.debug = console.error = function () {};
