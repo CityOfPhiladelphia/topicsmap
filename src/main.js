@@ -46,6 +46,7 @@ var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
 
 console.log('process.env.VUE_APP_FOO', process.env.VUE_APP_FOO);
+console.log('process.env.VUE_APP_MYCUSTOMENV', process.env.VUE_APP_MYCUSTOMENV);
 
 layerboard(
   {
