@@ -102,13 +102,13 @@ layerboard(
       containerClass: 'map-container-type2',
     },
     cyclomedia: {
-      enabled: false,
+      enabled: true,
       measurementAllowed: false,
       popoutAble: true,
       recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs'
     },
     pictometry: {
-      enabled: false,
+      enabled: true,
       iframeId: 'pictometry-ipa'
     },
     gatekeeperKey: GATEKEEPER_KEY,
