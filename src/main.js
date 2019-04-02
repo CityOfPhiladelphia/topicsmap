@@ -40,73 +40,78 @@ window.openHelp = function(){
   window.location.hash = finalHash;
 }
 
-var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/ajrothwell/openmaps-base-config@de93992fa42660d4df22e90df584c34ad480261e/config.js';
+import topicsmap_file from './topicsmap_file.js';
+var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-default-base-config@d3ad38f050cf55b4ab0dc2ff68e6f18025690246/config.js';
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
 
-layerboard({
-  bundled: true,
-  layerFilter: false,
-  router: {
-    enabled: true
-  },
-  geolocation: {
-    enabled: true,
-    icon: ['far', 'dot-circle']
-  },
-  addressInput: {
-    width: 415,
-    mapWidth: 300,
-    position: 'right',
-    autocompleteEnabled: false,
-    autocompleteMax: 15,
-    placeholder: 'Search the map',
-  },
-  map: {
-    defaultBasemap: 'pwd',
-    defaultIdentifyFeature: 'address-marker',
-    imagery: {
+
+layerboard(
+  {
+    bundled: true,
+    layerFilter: false,
+    router: {
       enabled: true
     },
-    historicBasemaps: {
-      enabled: true
+    geolocation: {
+      enabled: true,
+      icon: ['far', 'dot-circle']
     },
-    center: [-75.16347348690034, 39.952562122622254],
-    clickToIdentifyFeatures: true,
-    containerClass: 'map-container-type2',
-  },
-  cyclomedia: {
-    enabled: true,
-    measurementAllowed: false,
-    popoutAble: true,
-  },
-  pictometry: {
-    enabled: true,
-  },
-  gatekeeperKey: GATEKEEPER_KEY,
-  baseConfig: BASE_CONFIG_URL,
-  webmapId: WEBMAP_ID,
-  defaultPanel: 'topics',
-  topics: [
-    permit,
-    pave,
-    pickup,
-    snow,
-  ],
-  defaultTopic: null,
-  components: [
-    {
-      type: 'callout',
-      slots: {
-        text: 'Welcome to STREETsmartPHL.  Turn on and off map layers in the topics below'
-      }
+    addressInput: {
+      width: 415,
+      mapWidth: 300,
+      position: 'right',
+      autocompleteEnabled: false,
+      autocompleteMax: 15,
+      placeholder: 'Search the map',
     },
-    {
-      type: 'topic-set',
-      // options: {
-      //   defaultTopic: null
-      // }
+    map: {
+      defaultBasemap: 'pwd',
+      defaultIdentifyFeature: 'address-marker',
+      imagery: {
+        enabled: true
+      },
+      historicBasemaps: {
+        enabled: true
+      },
+      center: [-75.16347348690034, 39.952562122622254],
+      clickToIdentifyFeatures: true,
+      containerClass: 'map-container-type2',
     },
-  ],
-  modals: ['help'],
-});
+    cyclomedia: {
+      enabled: true,
+      measurementAllowed: false,
+      popoutAble: true,
+    },
+    pictometry: {
+      enabled: true,
+    },
+    gatekeeperKey: GATEKEEPER_KEY,
+    baseConfig: BASE_CONFIG_URL,
+    webmapId: WEBMAP_ID,
+    defaultPanel: 'topics',
+    topics: [
+      permit,
+      pave,
+      pickup,
+      snow,
+    ],
+    defaultTopic: null,
+    components: [
+      {
+        type: 'callout',
+        slots: {
+          text: 'Welcome to STREETsmartPHL.  Turn on and off map layers in the topics below'
+        }
+      },
+      {
+        type: 'topic-set',
+        // options: {
+        //   defaultTopic: null
+        // }
+      },
+    ],
+    modals: ['help'],
+  },
+  topicsmap_file
+);
