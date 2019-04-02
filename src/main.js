@@ -45,7 +45,7 @@ var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/mapboard-d
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
 
-// console.log('$MY_VAR:', $MY_VAR);
+console.log('process.env.VUE_APP_FOO', process.env.VUE_APP_FOO);
 
 layerboard(
   {

@@ -6,6 +6,7 @@ env:
     - MY_VAR=hello
 before_install:
   - printf "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${FA_AUTH_TOKEN}" >> ~/.npmrc
+  - printf "VUE_APP_FOO=test" >> ~/.env
 script: npm run build
 before_deploy:
   - rm -rf node_modules
