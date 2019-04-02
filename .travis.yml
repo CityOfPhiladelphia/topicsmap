@@ -6,6 +6,8 @@ before_install:
 script: npm run build
 before_deploy:
   - rm -rf node_modules
+  - printf "export default { cyclomedia:{test:'TestVal'}};" >> ~/src/topicsmap_file.js
+
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
