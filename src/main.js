@@ -44,19 +44,19 @@ var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/layerboard
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
 
-let obj = {
-  cyclomedia: {
-    host: process.env.VUE_APP_CYCLOMEDIA_HOST,
-    username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
-    password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
-    apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
-  },
-  pictometryLocal: {
-    host: process.env.VUE_APP_PICTOMETRY_HOST,
-    apiKey: process.env.VUE_APP_PICTOMETRY_API_KEY,
-    secretKey: process.env.VUE_APP_PICTOMETRY_SECRET_KEY,
-  },
-}
+// let obj = {
+//   cyclomedia: {
+//     host: process.env.VUE_APP_CYCLOMEDIA_HOST,
+//     username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
+//     password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
+//     apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
+//   },
+//   pictometryLocal: {
+//     host: process.env.VUE_APP_PICTOMETRY_HOST,
+//     apiKey: process.env.VUE_APP_PICTOMETRY_API_KEY,
+//     secretKey: process.env.VUE_APP_PICTOMETRY_SECRET_KEY,
+//   },
+// }
 
 layerboard(
   {
@@ -94,11 +94,18 @@ layerboard(
       enabled: true,
       measurementAllowed: false,
       popoutAble: true,
-      recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs'
+      recordingsUrl: 'https://atlas.cyclomedia.com/Recordings/wfs',
+      host: process.env.VUE_APP_DEVELOPMENT_HOST,
+      username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
+      password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
+      apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
     },
     pictometry: {
       enabled: true,
-      iframeId: 'pictometry-ipa'
+      iframeId: 'pictometry-ipa',
+      host: process.env.VUE_APP_DEVELOPMENT_HOST,
+      apiKey: process.env.VUE_APP_PICTOMETRY_API_KEY,
+      secretKey: process.env.VUE_APP_PICTOMETRY_SECRET_KEY,
     },
     gatekeeperKey: GATEKEEPER_KEY,
     baseConfig: BASE_CONFIG_URL,
@@ -127,5 +134,5 @@ layerboard(
     ],
     modals: ['help'],
   },
-  obj
+  // obj
 );
