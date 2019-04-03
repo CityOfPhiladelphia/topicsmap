@@ -57,6 +57,15 @@ var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
 //     secretKey: process.env.VUE_APP_PICTOMETRY_SECRET_KEY,
 //   },
 // }
+let pictApiKey, pictSecretKey;
+const host = window.location.hostname;
+if (host === 'topicsmap-dev.s3-website-us-east-1.amazonaws.com') {
+  pictApiKey = process.env.VUE_APP_DEV_PICTOMETRY_API_KEY;
+  pictSecretKey = process.env.VUE_APP_DEV_PICTOMETRY_SECRET_KEY;
+} else {
+  pictApiKey = process.env.VUE_APP_PICTOMETRY_API_KEY;
+  pictSecretKey = process.env.VUE_APP_PICTOMETRY_SECRET_KEY;
+}
 
 layerboard(
   {
@@ -103,9 +112,8 @@ layerboard(
     pictometry: {
       enabled: true,
       iframeId: 'pictometry-ipa',
-      host: process.env.VUE_APP_DEVELOPMENT_HOST,
-      apiKey: process.env.VUE_APP_PICTOMETRY_API_KEY,
-      secretKey: process.env.VUE_APP_PICTOMETRY_SECRET_KEY,
+      apiKey: pictApiKey,
+      secretKey: pictSecretKey,
     },
     gatekeeperKey: GATEKEEPER_KEY,
     baseConfig: BASE_CONFIG_URL,
