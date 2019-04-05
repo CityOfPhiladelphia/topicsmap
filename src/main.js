@@ -7,6 +7,12 @@ ___________           .__
                |__|           \/     \/      \/     \/|__|
 */
 
+// turn off console logging in production
+const { hostname='' } = location;
+if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
+  console.log = console.info = console.debug = console.error = function () {};
+}
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSnowflake } from '@fortawesome/free-solid-svg-icons/faSnowflake';
 import { faScroll } from '@fortawesome/free-solid-svg-icons/faScroll';
@@ -22,11 +28,6 @@ import snow from './topics/snow';
 import pickup from './topics/pickup';
 import permit from './topics/permit';
 
-// turn off console logging in production
-const { hostname='' } = location;
-if (hostname !== 'localhost' && !hostname.match(/(\d+\.){3}\d+/)) {
-  console.log = console.info = console.debug = console.error = function () {};
-}
 
 window.openHelp = function(){
   var firstHash = window.location.hash;
@@ -44,19 +45,6 @@ var BASE_CONFIG_URL = 'https://cdn.jsdelivr.net/gh/cityofphiladelphia/layerboard
 var GATEKEEPER_KEY = 'ec8681f792812d7e3ff15e9094bfd4ad';
 var WEBMAP_ID = 'dc26248081404ffbb428b988b4dc940f';
 
-// let obj = {
-//   cyclomedia: {
-//     host: process.env.VUE_APP_CYCLOMEDIA_HOST,
-//     username: process.env.VUE_APP_CYCLOMEDIA_USERNAME,
-//     password: process.env.VUE_APP_CYCLOMEDIA_PASSWORD,
-//     apiKey: process.env.VUE_APP_CYCLOMEDIA_API_KEY,
-//   },
-//   pictometryLocal: {
-//     host: process.env.VUE_APP_PICTOMETRY_HOST,
-//     apiKey: process.env.VUE_APP_PICTOMETRY_API_KEY,
-//     secretKey: process.env.VUE_APP_PICTOMETRY_SECRET_KEY,
-//   },
-// }
 let pictApiKey, pictSecretKey;
 const host = window.location.hostname;
 if (host === 'topicsmap-dev.s3-website-us-east-1.amazonaws.com') {
