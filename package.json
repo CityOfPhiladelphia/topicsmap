@@ -15,12 +15,12 @@
   "dependencies": {
     "@philly/layerboard": "^0.0.19",
     "@sentry/browser": "4.3.4",
-    "vue": "^2.6.9"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
-    "vue-template-compiler": "^2.6.9",
+    "vue-template-compiler": "^2.6.10",
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "postcss": {
