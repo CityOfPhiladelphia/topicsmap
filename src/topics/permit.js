@@ -12,7 +12,7 @@ export default {
       }
     },
     {
-      type: 'checkbox-set',
+      type: 'radio-button-set',
       options: {
         topicLayers: [
           'Current Lane Closures',
